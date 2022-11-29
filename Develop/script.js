@@ -10,11 +10,20 @@ function generatePassword() {
     var passwordLength = prompt("Your password must be between 8 and 256 characters how many would you like?")
   }
 
+  if(passwordLength != Number) {
+    alert("You must enter a numeric value!");
+  } else {
+    alert("Your password will be ${passwordLength} characters");
+  }
+
   var letters = "abcdefghijklmonpqrstuvwxyz";
   var numbers = "0123456789";
   var special = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+  var capitalLetters = letters.toUpperCase();
 
   var numbersConfirm = confirm("Click OK if you would like to include numbers in your password");
+
+
   var lettersConfirm = confirm("Click OK if you would like to include lowercase letters in your password");
   var lettersUpperConfirm = confirm("Click OK if you would like to include uppercase letters in your password");
   var specialConfirm = confirm("Click OK if you would like to include special characters in your password");
