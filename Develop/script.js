@@ -6,28 +6,31 @@ function generatePassword() {
   // Declare password length with a value of 0
   var passwordLength = 0;
   // Prompt to choose how many characters in their password
-  var passwordLength = prompt("Your password must be between 8 and 256 characters how many would you like?")
-
-  while(passwordLength <= 7 || passwordLength >= 257) {
-    alert("Your password must be between 8 and 256 characters please try again");
+  var passwordLength = prompt("Your password must be between 8 and 128 characters how many would you like?")
+  
+  // A while loop to keep the password between 8 and 128 characters. With an alert message 
+  while(passwordLength <= 7 || passwordLength >= 129) {
+    alert("Your password must be between 8 and 128 characters please try again");
     passwordLength();
   }
-
-  if(passwordLength !== Number) {
+  
+  // If statement to make sure that they input a numeric value.
+  if(isNaN(passwordLength)) {
     alert("You must enter a numeric value!");
     return passphrase;
   } else {
-    alert("Your password will be ${passwordLength} characters");
+    alert(`Your password will be ${passwordLength} characters`);
   }
 
+  // Declare the variables needed
   var letters = "abcdefghijklmonpqrstuvwxyz";
   var numbers = "0123456789";
   var special = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
   var capitalLetters = letters.toUpperCase();
-  var userOption = false;
   var randomOption = "";
   var passwordCharacters = "";
 
+  // Confirm messages for the different options to implement
   var numbersConfirm = confirm("Click OK if you would like to include numbers in your password");
   if(numbersConfirm == true) {
     passwordCharacters += numbers;
@@ -47,7 +50,9 @@ function generatePassword() {
   if(specialConfirm == true) {
     passwordCharacters += special;
   }
+// ----------------------------
 
+// A for loop to loop through the passwordLength and generate random characters to passwordCharacters at the specified length
   for (var p = 0; p < passwordLength; p++) {
     randomOption = Math.floor(Math.random() * passwordCharacters.length);
     passphrase += passwordCharacters.substring(randomOption, randomOption +1);
