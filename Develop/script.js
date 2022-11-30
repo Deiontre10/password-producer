@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  var passphrase = "";
   // Declare password length with a value of 0
   var passwordLength = 0;
   // Prompt to choose how many characters in their password
@@ -12,12 +13,13 @@ function generatePassword() {
     passwordLength();
   }
 
-  // if(passwordLength ) {
-  //   alert("You must enter a numeric value!");
-  // } else {
-  //   alert("Your password will be ${passwordLength} characters");
-  // }
-  var passphrase = "";
+  if(passwordLength !== Number) {
+    alert("You must enter a numeric value!");
+    return passphrase;
+  } else {
+    alert("Your password will be ${passwordLength} characters");
+  }
+
   var letters = "abcdefghijklmonpqrstuvwxyz";
   var numbers = "0123456789";
   var special = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
@@ -25,7 +27,6 @@ function generatePassword() {
   var userOption = false;
   var randomOption = "";
   var passwordCharacters = "";
-
 
   var numbersConfirm = confirm("Click OK if you would like to include numbers in your password");
   if(numbersConfirm == true) {
@@ -46,7 +47,6 @@ function generatePassword() {
   if(specialConfirm == true) {
     passwordCharacters += special;
   }
-
 
   for (var p = 0; p < passwordLength; p++) {
     randomOption = Math.floor(Math.random() * passwordCharacters.length);
