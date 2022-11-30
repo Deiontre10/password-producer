@@ -7,7 +7,7 @@
 - [Visuals](#visuals)
 
 ## Description
-A password generator that allows you to create strong passwords using random letters, numbers and special characters. Also allows you to choose if you would uppercase and/or lower case letters. The generator will allow you to choose how many characters you would like in your password. As little as 8 characters and at most 256 characters.
+A password generator that allows you to create strong passwords using random letters, numbers and special characters. Also allows you to choose if you would uppercase and/or lower case letters. The generator will allow you to choose how many characters you would like in your password. As little as 8 characters and at most 128 characters.
 
 
 ## Visuals
