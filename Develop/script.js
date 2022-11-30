@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  
   var passphrase = "";
   // Declare password length with a value of 0
   var passwordLength = 0;
