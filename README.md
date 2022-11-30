@@ -12,8 +12,8 @@ A password generator that allows you to create strong passwords using random let
 
 ## Visuals
 
-![A screenshot of the website](Assets/ "Main Screen")
+![A screenshot of the website](Assets/main.png "Main Screen")
 
-![A screenshot of an error message on the website](Assets/ "Error Message")
+![A screenshot of an error message on the website](Assets/error.png "Error Message")
 
-![A screenshot of an confirm message on the website](Assets/ "Confirm Message")
+![A screenshot of an confirm message on the website](Assets/confirm.png "Confirm Message")
