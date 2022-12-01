@@ -35,21 +35,25 @@ function generatePassword() {
   var numbersConfirm = confirm("Click OK if you would like to include numbers in your password");
   if(numbersConfirm == true) {
     passwordCharacters += numbers;
+    alert("Your password will include numbers.");
   }
 
   var lettersConfirm = confirm("Click OK if you would like to include lowercase letters in your password");
   if(lettersConfirm == true) {
     passwordCharacters += letters;
+    alert("Your password will include letters.");
   }
 
   var lettersUpperConfirm = confirm("Click OK if you would like to include uppercase letters in your password");
   if(lettersUpperConfirm == true) {
     passwordCharacters += capitalLetters;
+    alert("Your password will include capital letters.");
   }
 
   var specialConfirm = confirm("Click OK if you would like to include special characters in your password");
   if(specialConfirm == true) {
     passwordCharacters += special;
+    alert("Your password will include special characters.");
   }
 // ----------------------------
 
